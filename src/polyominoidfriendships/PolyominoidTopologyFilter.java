@@ -48,19 +48,7 @@ public class PolyominoidTopologyFilter extends OnlyPolyFilter {
         to = pa.getStringValue("to", false);
         fromRep = pa.getStringValue("fromrep", false);
         toRep = pa.getStringValue("torep", false);
-        if (noPool) {
-            try {
-                String f1 = "various\\friendsr-" + pSize + "-1.txt";
-                if (restricted)
-                    f1 = "various\\rest-friendsr-" + pSize + "-1.txt";
-                fw3 = new FileWriter(f1);
-
-            }  catch (IOException e) {
-                System.out.println("An error occurred.");
-                e.printStackTrace();
-                System.exit(1);
-            }     
-        }
+       
     }
 
     public boolean write(long n, Polyform inPoly) {
@@ -372,7 +360,7 @@ public class PolyominoidTopologyFilter extends OnlyPolyFilter {
             int number = 0;
             poolNumber++;
             System.out.println("" + pool.size());
-            String fileName = "various\\topology-" + pSize + "-" + poolNumber + ".txt";
+            String fileName = "topology-" + pSize + "-" + poolNumber + ".txt";
             
             try {
                 FileWriter fw = new FileWriter(fileName);

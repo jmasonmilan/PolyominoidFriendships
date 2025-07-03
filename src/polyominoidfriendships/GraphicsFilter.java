@@ -141,44 +141,10 @@ public class GraphicsFilter extends OnlyPolyFilter {
         for (int i = 0; i < list.size(); i += (rows * numHoriz)) {
             ArrayList<Polyform> newList = copy(list, i, rows * numHoriz);
             display(newList,   numHoriz,  name + "-" + polySize + "-" + i);
-            if (html) {
-                String htm = "html\\" + name + "-" + i + ".htm";
-                try {
-                    if (i < list.size() - 1)
-                        whtml(name, name, name , i, i + 1, polySize);
-                    else
-                        whtml(name, name, name + "b" , i, i - 1, polySize);
-                    if (i > 1)
-                        whtml(name, name + "b", name + "b" , i, i - 1, polySize);
-                    else
-                        whtml(name, name + "b", name  , i, i - 1, polySize);
-                    
-                } catch(Exception e) {
-                    
-                    System.err.println(e.getMessage());
-                    System.exit(1);
-                }
-            }
+            
         }
     }
-    void whtml(String name, String current, String other, int i, int j, int polySize) throws Exception {
-        String htm = "html\\" + current + "-" + i + ".htm";
-                    PrintWriter writer = new PrintWriter(htm, "UTF-8");
-                    
-                    writer.println("<html>");
-                    writer.println("<head>");
-                    //if (i < list.size() -1 ) {
-                        writer.println("<meta http-equiv=\"refresh\" content=\"" + time + ";url=" + other + "-" + (j) + ".htm\" />");
-                    //}
-                    writer.println("</head>");
-                    writer.println("<body>");
-                    //writer.println("<audio src=\"..\\midinotes\\a3.mid\" autoplay=\"autoplay\" loop=\"loop\"></audio>");
-                    writer.println("<img src=\"..\\png\\" + name + "-" + polySize + "-" + i + "-1.png\" />");
-                    writer.println("</body>");
-                    writer.println("</html>");
-
-                    writer.close();          
-    }
+    
     private ArrayList<Polyform> copy(ArrayList<Polyform> inList, int from, int forMax) {
         ArrayList<Polyform> ret = new ArrayList<>();
         for (int i = 0 ; i < forMax && i + from < inList.size(); i++) {
@@ -262,7 +228,7 @@ public class GraphicsFilter extends OnlyPolyFilter {
             String filename = name  + "-" + numHoriz;
             if (gp.filename != null)
                 filename = gp.filename;
-            String dest = imageType + "\\" + filename  + "." + imageType;
+            String dest =  filename  + "." + imageType;
            
                 ImageIO.write(image, imageType, new File(dest));
                 imageFiles.add(dest);
