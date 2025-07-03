@@ -14,8 +14,9 @@ x even, y even, z odd - flat square, parallel to z = 0<br/>
 x odd, y even, z even - vertical square, parallel to x = 0<br/>
 x even, y odd, z even - vertical square, parallel to y = 0<br/>
 <br/>
-To use the programs:
-1. Compile the java source (there are more classes than necessary in the folder, that may be used in a future version). 
-2. Create 2 empty folders, with names "Various" and "png".
-3. 
+To use the programs:<br/>
+1. Compile the java source (there are more classes than necessary in the folder, that may be used in a future version). <br/>
+2. Run the friendship finder program: java -jar "dist\PolyominoidFriendships.jar" stdinToRep repToForm:form=Polyominoid polyominoidtopology ominoid4.txt<br/> This will create in the current folder a file topology-4-n.txt, for n = 1 to 5, one for each component of the size 4 polyominoids.<br/>
+3. Count the number of lines in any file with a line counting utility of your OS (like "wc -l"), or run java -jar "dist\PolyominoidFriendships.jar" stdinToRep  repToForm:form=Polyominoid ocount stdout topology-4-1.txt<br/>
+4. Obtain an illustration of the first few of each component: java -jar "dist\PolyominoidFriendships.jar" stdinToRep lines:from=1,to=8 repToForm:form=Polyominoid graphics:horiz=4,prefix=ttopology4-1 topology-4-1.txt<br/>This will create one or more png files containing illustrations of the polyominoids in that component.<br/>
 
