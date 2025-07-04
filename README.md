@@ -2,7 +2,7 @@ This project enables the identification of components of friendly polyominoids.<
 To make an example, run the program (according to instructions given below) with in input all polyominoids of size 4.<br/>
 The program will output to separate files the various components, each containing polyominoids that are friends of each other, or friends of friends, etc.<br/>
 <br/>
-One polyominoid is defined to the friend of another if the first can be transformed into the second by rotating, either 90 or 180 degrees, a subset of its squares about a hinge. NB - tearing is allowed!<br/>
+One polyominoid is defined to be the friend of another if the first can be transformed into the second by rotating, either 90 or 180 degrees, a subset of its squares about a hinge. NB - tearing is allowed!<br/>
 <br/>
 Polyominoids of sizes 1 through 8 are available in 8 txt files that can be found in the archive: data/input/polyominoids1-8.zip.<br/>
 <br/>
