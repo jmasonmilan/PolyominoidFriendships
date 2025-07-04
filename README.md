@@ -22,4 +22,5 @@ To use the programs:<br/>
 <br/>
 Examples of output files may be found in the folder data/output.<br/>
 Examples of illustrations may be found in data/png.<br/>
+A summary of the components associated with polyominoids of sizes 4 to 12 is given in PolyominoidFriendships.pdf.
 
